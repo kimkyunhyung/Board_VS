@@ -16,7 +16,7 @@ var express = require('express')
 // Express의 미들웨어 불러오기
 var bodyParser = require('body-parser')
   , cookieParser = require('cookie-parser')
-  , static = require('serve-static')
+  , path_static = require('serve-static')
   , errorHandler = require('errorhandler');
 
 // 에러 핸들러 모듈 사용
@@ -65,7 +65,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 // public 폴더를 static으로 오픈
-app.use('/public', static(path.join(__dirname, 'public')));
+app.use('/public', path_static(path.join(__dirname, 'public')));
  
 // cookie-parser 설정
 app.use(cookieParser());

@@ -18,7 +18,7 @@ function dirname(path) {
 function getActiveScript() {
 	var d = document.getElementsByTagName("script");
 	var path = dirname(d[d.length - 1].src);
-	delete d;
+	//delete d;
 	
 	var offset=path.indexOf(location.host)+location.host.length;
 	return path.substring(offset);

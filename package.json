@@ -1,0 +1,8 @@
+{
+    "scripts" : {
+        "compile" : "babel app.js -o ../dist/app.js",
+        "compileall" : "babel . --out-dir ../dist",
+        "config" : "babel config --out-dir ../dist/config",
+        "run" : "node ../dist/app.js"
+    }
+}
